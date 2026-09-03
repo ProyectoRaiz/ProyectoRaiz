@@ -1,0 +1,190 @@
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition-normal);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--color-durazno);
+  color: var(--color-tierra);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  background-color: #f0b599;
+}
+
+.btn-secondary {
+  background-color: var(--color-salvia);
+  color: var(--color-crema);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  filter: brightness(1.05);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--color-tierra);
+  color: var(--color-tierra);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-tierra);
+  color: var(--color-crema);
+}
+
+/* Cards */
+.card {
+  background-color: var(--color-blanco);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.badge-popular {
+  background-color: var(--color-mantequilla);
+  color: var(--color-tierra);
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(107, 90, 78, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background-color: var(--color-crema);
+  border-radius: var(--radius-lg);
+  width: 90%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  transform: translateY(20px) scale(0.95);
+  transition: var(--transition-normal);
+  opacity: 0;
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-overlay.active .modal-content {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--color-tierra-transparente);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: var(--color-tierra);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+  z-index: 10;
+}
+
+.modal-close:hover {
+  background: var(--color-tierra);
+  color: var(--color-crema);
+  transform: rotate(90deg);
+}
+
+/* Accordion (FAQ) */
+.accordion-item {
+  border-bottom: 1px solid var(--color-tierra-transparente);
+  margin-bottom: var(--spacing-xs);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.accordion-header {
+  padding: var(--spacing-sm) var(--spacing-md);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-crema);
+  transition: var(--transition-fast);
+}
+
+.accordion-header h3 {
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  font-family: var(--font-sans);
+}
+
+.accordion-icon {
+  font-size: 1.5rem;
+  transition: var(--transition-normal);
+  color: var(--color-salvia);
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(45deg);
+  color: var(--color-durazno);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), padding 0.4s ease;
+  background-color: rgba(183, 203, 174, 0.1); /* Very subtle salvia */
+}
+
+.accordion-item.active .accordion-content {
+  padding: var(--spacing-md);
+  max-height: 500px; /* Arbitrary large number */
+}
