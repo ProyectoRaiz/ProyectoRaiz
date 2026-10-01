@@ -30,7 +30,7 @@
 }
 
 .nav-logo img {
-  height: 40px; /* Adjust size as needed */
+  height: 40px;
   width: auto;
 }
 
@@ -97,7 +97,7 @@
   font-size: 4.5rem;
   margin-bottom: var(--spacing-md);
   color: var(--color-tierra);
-  opacity: 0; /* Animated in via JS */
+  opacity: 0;
 }
 
 .hero-logo {
@@ -106,14 +106,14 @@
   height: auto;
   margin: 0 auto var(--spacing-md);
   display: block;
-  opacity: 0; /* Animated in via JS */
+  opacity: 0;
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
   color: var(--color-tierra);
   margin-bottom: var(--spacing-lg);
-  opacity: 0; /* Animated in via JS */
+  opacity: 0;
 }
 
 #hero-canvas {
@@ -160,9 +160,9 @@
   opacity: 1;
 }
 
-.pillar-1 { background-color: rgba(183, 203, 174, 0.3); } /* Salvia sutil */
+.pillar-1 { background-color: rgba(183, 203, 174, 0.3); }
 .pillar-2 { background-color: var(--color-crema); border: 1px solid rgba(107, 90, 78, 0.2); }
-.pillar-3 { background-color: rgba(242, 217, 161, 0.3); } /* Mantequilla sutil */
+.pillar-3 { background-color: rgba(242, 217, 161, 0.3); }
 
 .about-image-container {
   position: relative;
@@ -233,12 +233,13 @@
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: all 0.4s ease;
+  transition: max-height 0.5s ease, opacity 0.4s ease, margin-top 0.4s ease;
   transform: translateZ(15px);
 }
 
+/* Allow every service, including Tienda Raíz, to show its complete list. */
 .service-card:hover .service-deliverables {
-  max-height: 200px;
+  max-height: 600px;
   opacity: 1;
   margin-top: var(--spacing-md);
 }
@@ -304,13 +305,8 @@
   transition: opacity 0.4s ease;
 }
 
-.portfolio-item:hover img {
-  transform: scale(1.05);
-}
-
-.portfolio-item:hover .portfolio-overlay {
-  opacity: 1;
-}
+.portfolio-item:hover img { transform: scale(1.05); }
+.portfolio-item:hover .portfolio-overlay { opacity: 1; }
 
 .portfolio-overlay h3 {
   color: var(--color-crema);
@@ -327,9 +323,7 @@
 }
 
 .portfolio-item:hover .portfolio-overlay h3,
-.portfolio-item:hover .portfolio-overlay p {
-  transform: translateY(0);
-}
+.portfolio-item:hover .portfolio-overlay p { transform: translateY(0); }
 
 /* Modal specific for portfolio */
 .case-study-header {
@@ -346,9 +340,7 @@
   background-color: var(--color-blanco);
 }
 
-.case-study-body {
-  padding: var(--spacing-lg);
-}
+.case-study-body { padding: var(--spacing-lg); }
 
 .case-study-tags {
   display: flex;
@@ -382,9 +374,7 @@
 }
 
 /* Contact / Chat Widget */
-.contact {
-  background-color: rgba(239, 195, 172, 0.1); /* Subtle durazno */
-}
+.contact { background-color: rgba(239, 195, 172, 0.1); }
 
 .chat-widget {
   max-width: 600px;
@@ -512,7 +502,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .hamburger { display: block; }
-  
+
   .nav-links {
     position: fixed;
     top: 0;
@@ -526,13 +516,7 @@
     box-shadow: -5px 0 15px rgba(0,0,0,0.1);
   }
 
-  .nav-links.active {
-    right: 0;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .nav-links.active { right: 0; }
+  .about-grid { grid-template-columns: 1fr; }
   .hero-title { font-size: 3rem; }
 }
