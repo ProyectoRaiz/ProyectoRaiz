@@ -257,7 +257,7 @@ function initChat() {
         if (action === 'identidad' || action === 'web' || action === 'retainer') {
           responseHTML = `¡Excelente elección! Cuéntanos más sobre tu idea y la haremos crecer. ¿Por dónde prefieres hablar?<br><br>
           <a href="https://wa.me/3113200214?text=Hola,%20me%20interesa%20el%20servicio%20de%20${encodeURIComponent(userText)}" target="_blank" class="btn btn-secondary" style="font-size:0.9rem; padding: 5px 10px;">📱 WhatsApp</a>
-          <a href="https://instagram.com/raizestudio" target="_blank" class="btn btn-outline" style="font-size:0.9rem; padding: 5px 10px;">📸 Instagram</a>`;
+          <a href="https://www.instagram.com/raizstudiocol?stkn=OHVyb2treWM5emw1" target="_blank" class="btn btn-outline" style="font-size:0.9rem; padding: 5px 10px;">📸 Instagram</a>`;
         } else {
           responseHTML = `¡Claro! Estamos aquí para resolver tus dudas.<br><br>
           <a href="https://wa.me/3113200214" target="_blank" class="btn btn-secondary" style="font-size:0.9rem; padding: 5px 10px;">Escríbenos por WhatsApp</a>`;
