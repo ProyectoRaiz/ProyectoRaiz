@@ -1,9 +1,11 @@
+/* Updated color variables to match new logo: purple #b13c8e, dark green #2d9b41, light green #81be5e
+   Coffee/brown (--color-tierra) and background (--color-crema) are preserved as requested */
 :root {
   /* Paleta de Colores Pastel */
   --color-crema: #FBF3E7;
-  --color-salvia: #B7CBAE;
-  --color-durazno: #EFC3AC;
-  --color-mantequilla: #F2D9A1;
+  --color-salvia: #81be5e; /* light green del logo */
+  --color-durazno: #b13c8e; /* morado del logo */
+  --color-mantequilla: #2d9b41; /* verde oscuro del logo */
   --color-tierra: #6B5A4E;
   --color-blanco: #ffffff;
   --color-tierra-transparente: rgba(107, 90, 78, 0.1);
@@ -115,7 +117,8 @@ html {
   left: 0;
   top: 0;
   border-radius: 40px;
-  box-shadow: 0 0 30px rgba(183, 203, 174, 0.5), 0 0 15px rgba(239, 195, 172, 0.4);
+  /* updated to use light green and purple tones for glow */
+  box-shadow: 0 0 30px rgba(129, 190, 94, 0.5), 0 0 15px rgba(177, 60, 142, 0.4);
   pointer-events: none;
 }
 
@@ -209,12 +212,12 @@ html {
 }
 
 .flip-card-front {
-  background: rgba(183, 203, 174, 0.4);
+  background: rgba(129, 190, 94, 0.4);
   color: var(--color-tierra);
 }
 
 .flip-card-back {
-  background: rgba(239, 195, 172, 0.6);
+  background: rgba(177, 60, 142, 0.6);
   color: var(--color-tierra);
   transform: rotateY(180deg);
 }
