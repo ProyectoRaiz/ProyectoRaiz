@@ -15,7 +15,6 @@
 
 .btn-primary {
   background-color: var(--color-durazno);
-  /* Light text improves contrast against the logo purple */
   color: var(--color-crema);
   box-shadow: var(--shadow-sm);
 }
@@ -28,7 +27,6 @@
 
 .btn-secondary {
   background-color: var(--color-salvia);
-  /* White text remains legible on the light-green button */
   color: var(--color-blanco);
   box-shadow: var(--shadow-sm);
 }
@@ -183,10 +181,19 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), padding 0.4s ease;
-  background-color: rgba(129, 190, 94, 0.1); /* Very subtle light green */
+  background-color: rgba(129, 190, 94, 0.1);
 }
 
 .accordion-item.active .accordion-content {
   padding: var(--spacing-md);
-  max-height: 500px; /* Arbitrary large number */
+  max-height: 500px;
+}
+
+/* Improve readability of the contact option buttons on the purple hover state. */
+.chat-option-btn:hover,
+.chat-option-btn:focus-visible,
+.chat-option-btn:active {
+  color: var(--color-crema) !important;
+  background-color: #962f78 !important;
+  border-color: #962f78 !important;
 }
