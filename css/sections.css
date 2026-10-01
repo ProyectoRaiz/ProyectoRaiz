@@ -444,7 +444,8 @@
 .message.user {
   align-self: flex-end;
   background-color: var(--color-durazno);
-  color: var(--color-tierra);
+  color: var(--color-crema); /* antes era var(--color-tierra) */
+  font-weight: 600;          /* opcional: hace el texto más legible */
   border-bottom-right-radius: 4px;
 }
 
